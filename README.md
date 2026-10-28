@@ -300,3 +300,5 @@ wrapper/configuration/test work is distinguished from upstream SDK functionality
 `/.well-known/x402` is this wrapper's discovery format, not an official x402 discovery schema. Payment challenges remain authoritative. `MAINTENANCE_MODE` is read at startup; restart to change it.
 
 Access logs omit query strings, bodies and payment signatures. `clientIp` is an unverified forwarded-header claim; do not use it for access decisions. JSON is recommended for production.
+
+Firewall allow/block lists accept IPv4, IPv6 and CIDR rules. Compressed IPv6 and IPv4-mapped addresses are normalized by the platform IP parser on both sides. Invalid rules fail configuration; invalid client identities are denied when filtering is enabled. Block rules take priority over allow rules.

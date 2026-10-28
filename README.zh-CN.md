@@ -209,3 +209,5 @@ AI 工具参与了开发；BrK 审核并负责此贡献。项目自己的 Wrappe
 请求 ID 是调用方可控的关联标签，不能用作身份凭证或付款去重键。生成的 UUID 只标记代理响应；非法调用方 ID 不会透传上游。
 仅同时携带 Origin 和 Access-Control-Request-Method 的 OPTIONS 属于免费预检，其他 OPTIONS 仍需付款。
 代理会过滤上游的 CORS 响应头，保持自身来源策略；CORS 不是服务器端鉴权。跨域响应也暴露 X-Request-ID。
+
+防火墙规则支持 IPv4、IPv6 和 CIDR，两侧均处理压缩 IPv6 与 IPv4 映射地址。非法规则在配置阶段报错；启用过滤时非法客户端地址被拒绝，阻止规则优先于允许规则。
